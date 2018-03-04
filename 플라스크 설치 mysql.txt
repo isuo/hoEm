@@ -1,0 +1,41 @@
+-> $ cd /path/to/project-directory      # Choose your project directory
+-- $ virtualenv -p python3 venv  # For Python 3, or
+-> $ virtualenv venv             # For Python 2
+
+-> $ source venv/bin/activate    # Activate the virual environment
+
+-> (venv)$ pip install flask     # Install flask using 'pip' which is symlinked to pip2 or pip3 (no sudo needed)
+
+Successfully installed 
+ Jinja2-2.9.5 
+ MarkupSafe-0.23 
+ Werkzeug-0.11.15 
+ click-6.7 
+ flask-0.12 
+ itsdangerous-0.24
+
+
+-> (venv)$ deactivate  # Exit virutal environment
+
+
+Installing Flask-WTF (under virtual environment)
+
+-> (venv)$ pip install flask-wtf
+
+Successfully installed WTForms-2.1 flask-wtf-0.14.2
+
+
+7.1  Installing SQLAlchemy (under virtual environment)
+
+-> (venv)$ pip install sqlalchemy
+
+7.2  Using SQLAlchemy with MySQL/PostgreSQL
+Installing MySQL Driver for Python
+
+
+
+# Python 2
+(venv)$ pip install MySQL-python
+
+
+mysqlclient?1.3.12?cp27?cp27m?win_amd64.whl

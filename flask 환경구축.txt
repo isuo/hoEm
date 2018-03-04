@@ -1,0 +1,52 @@
+1. flask 설치
+
+ 1) pip install virtualenv
+
+   가상환경 홈 디렉토리 만들고 이동
+   myproject
+ 2) 이동
+   cd myproject 
+
+ 3) 디렉터리에 가상 환경 생성
+
+  virtualenv venv
+
+ 4)가상환경 활성화
+   venv\Scripts 에서 activate.bat 실행
+
+ (venv)
+
+ 5) pip install flask
+ (wsgi, jinja2 생성됨)
+
+
+2. 통합개발 환경(ide)설치
+
+ Eclipse 설치
+ PyDev설치 개발환경 플러그인 설치
+  help> eclipse marketplace 선택
+       상단 find  "PyDev" 검색 설치
+
+  windows>proferences>pydev>interpreter>python 선택
+   new선택 pythonpath 설정(인터프리터 선택 후 Ok)
+
+3. githob 저장소 연결
+
+
+
+import projects 메뉴 선택
+프로젝트 유형선택 import as general projcet 선택 후
+next 한다. 확인후 마침.
+
+open perspective 선택 pydev perspective로 변경
+왼쪽 pydev package explorer view에 확인가능
+
+마지막으로 해당프로젝트를 pydev 프로젝트로 만들기
+
+마우스 오른쪽 선택 
+ pydev>set as pydev project 메뉴 선택.
+정상이면 pythonpath가 포함된 것을 확인 할 수 있다.
+
+
+ 
+
