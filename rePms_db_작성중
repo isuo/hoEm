@@ -1,0 +1,59 @@
+g_user			general user	일반사용자		
+	no	번호		자동생성		
+	name	이름				
+	c_name	회사명	company name			
+	c_phone	휴대폰	cellphone			
+	t_phone	전화	telephone			
+	addr	주소	address			
+	email	이메일				
+	b_num	사업자번호	business number			
+	reg_date	등록일	registration date	자동생성		
+	u_type	사용자유형	user type	소매, 도매, 임대,		
+	etc	기타 		위치정보, 2인 필요 유무, 오픈시간		
+						
+						
+a_user			admin user	관리자		
+	no					
+	email	전자주소	email			
+	pwd	암호	password			
+	name	이름				
+	c_phone	휴대폰	cellphone			
+	reg_date	등록일	registration date	자동생성		
+	u_type	사용자유형	user type	전체관리자, 내부as 담당, 외부as담당		
+	etc					
+						
+p_list			Product list	제품목록	소비자가 구매시 생성됨	
+	no	일련번호, 년월일+일련번호				
+	p_name	제품명	Product name			
+	p_m_name	제품모델명	Product model name			
+	p_sn	제품시리얼번호	Product serial number			
+	p_p_date	제품생산일자	product production date			
+	p_s_date	제품판매일자	product sale date		판매 일자 기준 as 기간 선정	
+	p_rating	제품등급	product rating		기본값 a급 , b, c 홀, d 주방, 창고, f 폐기	
+	p_state	제품상태	product state	장비관리에서 사용	회수됨 recalled, 정비중 check, 랜탈 rental , 페기하다 Abrogate  	
+	cs_date	상태변경일자	change status date			
+	g_user_no	사용자번호		소유자정보	외래키	g_user
+						
+						
+as			after-sales service	서비스	사용자가 장비의 이상 작동을 접수 한다 as관리자는 사용자 정보, 장비 정보, 이상 증상, 방문가능 일시 등을 접수 받고, 사용자 숙지 사항을(비용, 기본 방문 일자 등) 고지한다. 서비스 담당자를 지정한다 담당자는  서비스 방문 통지 밑 방문, 장비점검, 비용을 고지, 서비스 유무를 확인 후  진행한다. 현장 수리가 않 되면 입고 수리를 한다 입고 수리 시 대체 장비가 나갈 수도 있다.	
+	no	일련번호, 년월일+일련번호				
+	r_date	접수일자	receipt date			
+	c_date	완료일자	completion date			
+	r_content	접수내용	reception content			
+	g_user_no	서비스 용청자 정보			이름/상호, 주소, 전화, 	접수시 사용자 검색, 사용자 정보 확인, 없으면 등록
+	p_list_no	제품 목록의 번호			외래키 사용자가 구매한 제품 중 as접수한 제품 정보를 가저온다.    장비명, 모델, 구매일자, as받은 회수, 비용	
+						
+re_list			repair list 		수리 목록 하나의 제품에 여러 가지의 수리 목록 모터(2,4,6,8,16,32)흡/토, 냉장/냉동 온도조절기, 온도조절PCB, 전원PCB, LED등, DC아답터, 도어, 손잡이, 흰지, 전원/등 스위치, 전원코드선,  에바, 간냉에바, 직냉에바, 히터일체형 에바, 판형에바, 용량별 콤프, 배관세트(저압관, 모세관), 응축기, 드라이어, 콘덴서, 콤프부속(릴레이, OLP), 상/하 4w 가이드, 에바커버, 휴즈, 차단기, 히터봉, 에바센서, 판히터, 배수호스, 물통, 손잡이, 6p/4p 날개,    	
+	no	일련번호				
+	as_no	서비스 접수 번호			외래키	as
+	re_part	수리부위	repair part			
+	re_contents	수리내용	repair contents			
+	re_cost	수리비용	repair cost			
+						
+						
+p_rental			Product rental		제품대여	
+	no	일련번호				
+	r_date	대여일자	rental date		장비대여시	
+	c_date	회수일자	collection date		장비대여 반환시	
+	g_user_no	사용자번호			외래키	g_user
+	p_list_no	장비번호			외래키	p_list
