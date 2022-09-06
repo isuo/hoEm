@@ -1,0 +1,12 @@
+g_user			general user	일반사용자
+	no	번호		자동생성
+	name	이름		
+	c_name	회사명	company name	
+	c_phone	휴대폰	cellphone	
+	t_phone	전화	telephone	
+	addr	주소	address	
+	email	이메일		
+	b_num	사업자번호	business number	
+	reg_date	등록일	registration date	자동생성
+	u_type	사용자유형	user type	소매, 도매, 임대,
+	etc	기타 		위치정보, 2인 필요 유무, 오픈시간
