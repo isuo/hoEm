@@ -1,0 +1,9 @@
+제품대여 관리	주류판매사는 술을 팬매 하는 매장에 술을 진열할수 있도록 쇼케이스를 대여하고 장비의 사후
+관리를 해준다.  장비의 고장이나 대여를 직접하는 경우와 위탁을 통해 하는 경우도 있다.					
+
+p_rental			Product rental			
+	no	일련번호				
+	r_date	대여일자	rental date		장비대여시	
+	c_date	회수일자	collection date		장비대여 반환시	
+	g_user_no	사용자번호			외래키	g_user
+	p_list_no	장비번호			외래키	p_list
