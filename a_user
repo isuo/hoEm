@@ -1,0 +1,9 @@
+a_user			admin user	관리자
+	no	일련번호		
+	email	전자주소	email	
+	name	이름		
+	pwd	암호	password	
+	c_phone	휴대폰	cellphone	
+	reg_date	등록일	registration date	자동생성
+	u_type	사용자유형	user type	전체관리자, 내부as 담당, 외부as담당
+	etc	기타		
