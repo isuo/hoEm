@@ -1,0 +1,15 @@
+제품목록	소비자가 제품을 구매하는 경우, 가계를 운영하는 소비자가 입대를 받는 경우. 제품의 기본 정보를 입력한다. 
+사후 관리를 위해 자료를 보관한다. 소비자가 여러대의 제품을 구매 할수도 있다. 여러대를 대여 받을 수도 있다. 				
+
+p_list			Product list	제품목록	소비자가 구매시 생성됨
+	no	일련번호, 년월일+일련번호			
+	name	제품명	name		
+	m_name	제품모델명	model name		
+	s_num	시리얼번호	serial number		
+	p_date	생산일자	production date		
+	s_date	판매일자	sale date		판매 일자 기준 as 기간 선정
+	rating	등급	rating		기본값 a급 , b, c 홀, d 주방, 창고, f 폐기
+	state	상태	state	장비관리에서 사용	
+                    회수됨 recalled, 정비중 check, 랜탈 rental , 페기하다 Abrogate  
+	c_date	상태변경일자	change status date		
+	g_user_no	사용자번호		소유자정보	외래키
